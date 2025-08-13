@@ -1,0 +1,16 @@
+{
+  "name": "exp_cookies.day3",
+  "version": "1.0.0",
+  "description": "- react server is state less the dese't store the state....\r - this is short of problem or missing feature in backend....",
+  "main": "cookies.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ajay Kumar Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0"
+  }
+}

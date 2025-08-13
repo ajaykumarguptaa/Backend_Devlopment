@@ -1,0 +1,17 @@
+{
+  "name": "randomproject",
+  "version": "1.0.0",
+  "main": "Qr.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "inquirer": "^12.9.0",
+    "qr-image": "^3.2.0"
+  }
+}

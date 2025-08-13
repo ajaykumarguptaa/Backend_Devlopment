@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>dataBase</title>
+  </head>
+  <body>
+    <div class="p-8 w-full h-screen bg-zinc-900 overflow-auto">
+      <button
+        class="w-32 py-2 mt-4 mb-4 bg-blue-600 hover:bg-blue-700 rounded font-semibold"
+      >
+        <a href="/">Back To Home</a>
+      </button>
+      <h1 class="text-xl font-bold text-white mb-6">All Users</h1>
+
+      <% if(user.length > 0) { %>
+      <div class="users flex flex-wrap gap-6">
+        <% user.forEach((item) => { %>
+        <div class="User max-w-xs w-full p-4 bg-zinc-700 rounded-lg shadow-md">
+          <div class="w-full h-52 bg-zinc-800 rounded-lg overflow-hidden">
+            <img
+              src="<%= item.image  %>"
+              alt="User image"
+              class="object-cover w-full h-full"
+            />
+          </div>
+
+          <h2 class="mt-3 text-lg tracking-tight text-white">
+            #<%= item.username %>
+          </h2>
+          <h2 class="text-lg tracking-tight text-white"><%= item.name %></h2>
+          <h2 class="text-sm tracking-tight text-zinc-400">
+            <%= item.email %>
+          </h2>
+
+          <div class="flex mt-4 gap-4">
+            <a
+              href="/edit/<%= item._id %>"
+              class="border rounded-lg border-zinc-900 px-4 py-1 text-zinc-300 hover:text-white font-bold"
+            >
+              Edit User
+            </a>
+            <a
+              href="/delete/<%=item._id %>"
+              class="border rounded-lg border-zinc-900 px-4 py-1 text-red-500 hover:text-red-300 font-bold"
+            >
+              Delete
+            </a>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+      <% } else { %>
+      <p class="text-2xl text-zinc-300">No Users Found...</p>
+      <% } %>
+    </div>
+  </body>
+</html>
